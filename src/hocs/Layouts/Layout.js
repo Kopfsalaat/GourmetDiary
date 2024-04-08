@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 
 function Layout({children}){
     return(
-        <div>
+        <div className="!scroll-smooth">
             {children}
         </div>
     )
