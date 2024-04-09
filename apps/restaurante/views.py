@@ -6,7 +6,7 @@ from .models import Restaurante
 from .serializers import RestauranteSerializer
 
 @api_view(['GET'])
-def getRestaurantes(request, id):
+def getRestaurantes(request, id=None):
     if id is None:
         restaurante = Restaurante.objects.all()
         serializer = RestauranteSerializer(restaurante, many=True)
@@ -22,7 +22,9 @@ def getRestaurantes(request, id):
 def postRestaurante(request):
     serializer = RestauranteSerializer(data=request.data)
     if serializer.is_valid():
-        serializer.save()    
+        serializer.save()
+    else:
+        return Response({'error':'Restaurante not valid'}, status=404)
     return Response(serializer.data)
 
 @api_view(['PUT'])

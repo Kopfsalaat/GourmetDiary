@@ -25,7 +25,7 @@ media
 
 # Distribution / packaging
 .Python
-# build/
+build/
 develop-eggs/
 dist/
 downloads/
@@ -135,7 +135,7 @@ celerybeat.pid
 .env
 .venv
 env/
-venv/
+myenv/
 ENV/
 env.bak/
 venv.bak/

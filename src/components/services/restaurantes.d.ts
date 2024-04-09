@@ -2,7 +2,7 @@ interface Restaurante {
     id: number
     name: string
     ubication: string
-    category: string
+    category: number
     rate: number
     visited: boolean
     time_creation: string
@@ -22,7 +22,7 @@ export async function update({
     ud: number,
     name: string,
     ubication: string,
-    category: string,
+    category: number,
     rate: number,
     visited: boolean
 }) : Promise<Restaurante>

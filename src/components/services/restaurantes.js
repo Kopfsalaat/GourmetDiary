@@ -1,11 +1,11 @@
 export async function getRestaurantes(){
-    return fetch('${process.env.REACT_APP_API_URL}/restaurante', {
+    return fetch(`${process.env.REACT_APP_API_URL}/restaurante/`, {
         method: 'GET'
     }).then(response => response.json())
 }
 
 export async function getRestaurante({ id }){
-    return fetch('${proces.env.REACT_APP_API_URL}/restaurante/${id}', {
+    return fetch(`${process.env.REACT_APP_API_URL}/restaurante/${id}`, {
         method: 'GET'
     }).then(response => response.json())
 }
@@ -15,7 +15,7 @@ export async function postRestaurante({
     ubication,
     category,
 }) {
-    return fetch('${proces.env.REACT_APP_API_URL}/restaurante/post', {
+    return fetch(`${process.env.REACT_APP_API_URL}/restaurante/post/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ export async function update({
     category,
     rate,
 }) {
-    return fetch('${process.env.REACT_APP_API_URL}/restaurante/update/${id}', {
+    return fetch(`${process.env.REACT_APP_API_URL}/restaurante/update/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -50,7 +50,7 @@ export async function update({
 }
 
 export async function deleteRestaurante({ id }){
-    return fetch('${process.env.REACT_APP_API_URL}/restaurante/delete/${id}', {
+    return fetch(`${process.env.REACT_APP_API_URL}/restaurante/delete/${id}`, {
         method: 'DELETE'
     }).then(response => response.json())
 }
